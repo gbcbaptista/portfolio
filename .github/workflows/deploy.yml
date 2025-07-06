@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -33,4 +33,4 @@ jobs:
         run: aws s3 sync ./out/ s3://gabriel-baptista.dev --delete
 
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribuition-id E1Y1AO2BUF5FZW --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E1Y1AO2BUF5FZW --paths "/*"
