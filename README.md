@@ -131,5 +131,3 @@ As highlighted on the landing page, my current technical focus includes:
 - **Creating optimized, production-grade solutions**
 
 This portfolio hub will serve as a living showcase of projects that demonstrate these capabilities, from machine learning implementations to full-stack applications with AI integration.
-
----
