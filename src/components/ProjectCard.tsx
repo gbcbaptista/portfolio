@@ -5,7 +5,6 @@ interface ProjectCardProps {
   id: number;
   title: string;
   description: string;
-  longDescription?: string;
   techStack: string[];
   image?: string;
   demoUrl?: string | null;
@@ -20,7 +19,6 @@ interface ProjectCardProps {
 const ProjectCard = ({
   title,
   description,
-  longDescription,
   techStack,
   image,
   demoUrl,
@@ -31,7 +29,6 @@ const ProjectCard = ({
   startDate,
   completionDate,
 }: ProjectCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   const getStatusColor = (status: string) => {
@@ -114,12 +111,12 @@ const ProjectCard = ({
             <p className="text-white text-sm font-medium mb-2">View Project</p>
             <div className="flex gap-2 justify-center">
               {demoUrl && (
-                <span className="bg-accent text-white px-3 py-1 rounded-full text-xs cursor-default">
+                <span className="bg-accent text-white px-3 py-1 rounded-full text-xs">
                   Demo
                 </span>
               )}
               {githubUrl && (
-                <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-xs cursor-default">
+                <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-xs">
                   Code
                 </span>
               )}
@@ -153,17 +150,8 @@ const ProjectCard = ({
           </div>
 
           <p className="text-secondary text-sm lg:text-base leading-relaxed">
-            {isExpanded ? longDescription || description : description}
+            {description}
           </p>
-
-          {longDescription && longDescription !== description && (
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="text-accent text-sm mt-2 hover:underline font-medium"
-            >
-              {isExpanded ? "Show Less" : "Read More"}
-            </button>
-          )}
         </div>
 
         {(startDate || completionDate) && (

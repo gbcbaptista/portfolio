@@ -3,7 +3,7 @@ import ProjectsShowcase from "@/components/ProjectsShowcase";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-bg cursor-default">
       <Header />
 
       <main className="pt-0">

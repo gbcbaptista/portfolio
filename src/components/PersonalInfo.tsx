@@ -10,12 +10,12 @@ const PersonalInfo = () => {
           alt="Ícone GB"
           className="h-8 w-8 lg:h-10 lg:w-10 relative z-10"
         />
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary cursor-default">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
           Gabriel Baptista
         </h1>
       </div>
 
-      <p className="text-base sm:text-lg text-accent mb-4 cursor-default">
+      <p className="text-base sm:text-lg text-accent mb-4">
         🚀 Full Stack Engineer | AI Engineer Enthusiast
       </p>
 
