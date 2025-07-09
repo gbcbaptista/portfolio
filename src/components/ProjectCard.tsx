@@ -30,6 +30,7 @@ const ProjectCard = ({
   completionDate,
 }: ProjectCardProps) => {
   const [imageError, setImageError] = useState(false);
+  const techStackLimit = 7;
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -149,7 +150,7 @@ const ProjectCard = ({
             )}
           </div>
 
-          <p className="text-secondary text-sm lg:text-base leading-relaxed">
+          <p className="text-secondary text-sm lg:text-base leading-relaxed h-60">
             {description}
           </p>
         </div>
@@ -172,7 +173,7 @@ const ProjectCard = ({
             Tech Stack
           </h4>
           <div className="flex flex-wrap gap-2">
-            {techStack.slice(0, 6).map((tech, index) => (
+            {techStack.slice(0, techStackLimit).map((tech, index) => (
               <span
                 key={index}
                 className="px-2 py-1 bg-bg text-accent text-xs font-medium rounded-md border border-accent/30 hover:bg-accent/10 transition-colors"
@@ -180,9 +181,9 @@ const ProjectCard = ({
                 {tech}
               </span>
             ))}
-            {techStack.length > 6 && (
+            {techStack.length > techStackLimit && (
               <span className="px-2 py-1 bg-bg text-secondary text-xs font-medium rounded-md border border-gray-600">
-                +{techStack.length - 6} more
+                +{techStack.length - techStackLimit} more
               </span>
             )}
           </div>

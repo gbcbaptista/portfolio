@@ -1,57 +1,8 @@
+import projectsList from "@/app/projects";
 import ProjectCard from "./ProjectCard";
 import SocialLinks from "./SocialLinks";
 
 const ProjectsShowcase = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "AI Image Classifier",
-      description:
-        "A full-stack web application that classifies images in real-time using Transfer Learning with MobileNetV2",
-      techStack: [
-        "React",
-        "TypeScript",
-        "NestJS",
-        "Python",
-        "FastAPI",
-        "TensorFlow",
-        "MobileNetV2",
-        "Docker",
-        "Docker Compose",
-      ],
-      category: "AI/ML",
-      status: "Development" as const,
-      featured: false,
-      demoUrl: null,
-      githubUrl: "https://github.com/gbcbaptista/ai-image-classifier",
-      startDate: "June 2025",
-      completionDate: "July 2025",
-    },
-    {
-      id: 2,
-      title: "Kaggle Competitions Journey",
-      description:
-        "Implementing machine learning algorithms from scratch through competitive programming challenges",
-      techStack: [
-        "Python",
-        "Pandas",
-        "NumPy",
-        "Matplotlib",
-        "Seaborn",
-        "Jupyter Notebooks",
-        "Scikit-learn",
-        "Custom ML Algorithms",
-      ],
-      category: "AI/ML",
-      status: "Development" as const,
-      featured: false,
-      demoUrl: null,
-      githubUrl: "https://github.com/gbcbaptista/kaggle-competitions",
-      startDate: "May 2025",
-      completionDate: undefined,
-    },
-  ];
-
   return (
     <section className="py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -66,7 +17,7 @@ const ProjectsShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-          {projects.map((project) => (
+          {projectsList.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
         </div>
