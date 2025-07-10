@@ -1,7 +1,7 @@
 const projectsList = [
   {
     id: 1,
-    title: "AI Dog Breed Classifier",
+    title: "AI Dog Breed Classifier 🐕",
     description:
       "I developed a full-stack AI image classification application, from concept to cloud deployment. My responsibilities included training the Deep Learning model with TensorFlow/Keras, building a RESTful API with FastAPI, containerizing the services with Docker, and deploying the solution on a scalable AWS infrastructure (ECS, ECR, ALB).",
     techStack: [
