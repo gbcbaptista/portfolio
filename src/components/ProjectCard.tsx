@@ -193,8 +193,6 @@ const ProjectCard = ({
           {demoUrl ? (
             <a
               href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex-1 bg-accent text-white py-2 px-4 rounded-lg font-medium text-center hover:bg-accent/90 transition-colors text-sm lg:text-base flex items-center justify-center gap-2"
             >
               <span>Live Demo</span>
