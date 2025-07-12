@@ -18,7 +18,7 @@ const projectsList = [
     category: "AI/ML & Cloud",
     status: "Development" as const,
     featured: true,
-    demoUrl: null,
+    demoUrl: "https://dog-classifier.gabriel-baptista.dev/",
     githubUrl: "https://github.com/gbcbaptista/ai-image-dogs-classifier",
     startDate: "June 2025",
     completionDate: undefined,
