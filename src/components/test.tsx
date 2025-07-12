@@ -1,6 +1,6 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ProjectCardProps {
   id: number;
@@ -89,7 +89,7 @@ const ProjectCard = ({
             onError={() => setImageError(true)}
           />
         ) : (
-          <div className="w-full pt-6 sm:pt-0 h-40 sm:h-48 md:h-52 lg:h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+          <div className="w-full h-48 sm:h-52 lg:h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
             <div className="text-center">
               <div className="text-6xl mb-2 opacity-40">
                 {category === "AI/ML"
@@ -139,10 +139,10 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <div className="p-4 sm:p-6">
-        <div className="mb-3">
+      <div className="p-6">
+        <div className="mb-4">
           <div className="flex items-start justify-between mb-2">
-            <h3 className="mb-1 sm:mb-0 sm:h-16 text-xl lg:text-2xl font-bold text-primary group-hover:text-accent transition-colors line-clamp-2">
+            <h3 className="h-16 text-xl lg:text-2xl font-bold text-primary group-hover:text-accent transition-colors line-clamp-2">
               {title}
             </h3>
             {category && (
@@ -152,13 +152,32 @@ const ProjectCard = ({
             )}
           </div>
 
-          <p className="text-secondary text-sm lg:text-base leading-relaxed sm:h-60">
-            {description}
-          </p>
+          <AnimatePresence>
+            <motion.div
+              initial={{ height: "10rem" }}
+              animate={{ height: isExpanded ? "auto" : "10rem" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="sm:h-60 overflow-hidden"
+            >
+              <p
+                className={`text-secondary text-sm lg:text-base leading-relaxed ${
+                  !isExpanded ? "line-clamp-6" : ""
+                } sm:line-clamp-none`}
+              >
+                {description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-accent text-sm mt-2 sm:hidden"
+          >
+            {isExpanded ? "Ler menos" : "Ler mais"}
+          </button>
         </div>
 
         {(startDate || completionDate) && (
-          <div className="mb-3 text-xs text-secondary">
+          <div className="mb-4 text-xs text-secondary">
             {startDate && <span>Started: {startDate}</span>}
             {startDate && completionDate && <span className="mx-2">•</span>}
             {completionDate && featured && (
