@@ -152,7 +152,7 @@ const ProjectCard = ({
             )}
           </div>
 
-          <p className="text-secondary text-sm lg:text-base leading-relaxed sm:h-60">
+          <p className="text-secondary text-sm lg:text-base leading-relaxed sm:h-30 md:h-52 xl:h-60">
             {description}
           </p>
         </div>
