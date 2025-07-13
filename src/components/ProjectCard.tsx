@@ -152,7 +152,7 @@ const ProjectCard = ({
             )}
           </div>
 
-          <p className="text-secondary text-sm lg:text-base leading-relaxed sm:h-30 md:h-52 xl:h-60">
+          <p className="text-secondary text-sm lg:text-base leading-relaxed sm:h-36 md:h-72 lg:h-66 xl:h-80">
             {description}
           </p>
         </div>
@@ -170,7 +170,7 @@ const ProjectCard = ({
           </div>
         )}
 
-        <div className="mb-6">
+        <div className="mb-6 h-28 sm:h-24">
           <h4 className="text-sm font-semibold text-secondary mb-2 uppercase tracking-wide">
             Tech Stack
           </h4>
