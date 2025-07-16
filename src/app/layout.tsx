@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
+import Counter from "@/components/Counter";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -66,6 +67,7 @@ export default function RootLayout({
           <div className="animate-fade-in">{children}</div>
         )}
       </body>
+      <Counter />
     </html>
   );
 }
