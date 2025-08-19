@@ -16,7 +16,7 @@ const PersonalInfo = () => {
       </div>
 
       <p className="text-base sm:text-lg text-accent sm:mb-4">
-        Full Stack Engineer | AI Engineer Enthusiast
+        Full Stack Engineer | AI Engineer
       </p>
       <div className="hidden sm:block">
         <SocialLinks />
