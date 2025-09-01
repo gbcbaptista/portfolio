@@ -27,7 +27,7 @@ const projectsList = [
   githubUrl: "https://github.com/gbcbaptista/ai-image-dogs-classifier",
   startDate: "June 2025",
   completionDate: undefined,
-}
+  },
   {
     id: 2,
     title: "Kaggle Competitions Journey",
