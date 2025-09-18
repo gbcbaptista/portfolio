@@ -43,6 +43,37 @@ const projectsList = [
     startDate: "May 2025",
     completionDate: undefined,
   },
+  {
+    id: 3,
+    title: "Real-Time IoT Temperature Dashboard 🌡️",
+    description:
+      "Developed a complete, end-to-end IoT solution, from hardware to a globally deployed web application. This project captures real-time temperature data from an ESP32 microcontroller, securely ingests it via MQTT into a fully serverless AWS backend, and visualizes the data on a dynamic Next.js dashboard. The architecture is event-driven, featuring real-time updates via WebSockets and automated frontend deployments through a CI/CD pipeline with GitHub Actions.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Chart.js",
+      "AWS IoT Core",
+      "AWS Lambda",
+      "Amazon DynamoDB",
+      "API Gateway (REST & WebSocket)",
+      "Amazon S3",
+      "Amazon CloudFront",
+      "AWS IAM",
+      "GitHub Actions",
+      "ESP32",
+      "MQTT",
+    ],
+    category: "IoT & Full-Stack Cloud",
+    status: "Completed" as const,
+    featured: true,
+    demoUrl: "https://rt-temperature-monitor.gabriel-baptista.dev/",
+    githubUrl: "https://github.com/gbcbaptista/temperature-monitor",
+    startDate: "September 2025",
+    completionDate: "September 2025",
+  },
 ];
 
 export default projectsList;
