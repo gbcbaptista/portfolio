@@ -2,7 +2,7 @@
 
 **Live Site:** [gabriel-baptista.dev](https://gabriel-baptista.dev)
 
-A modern, minimalist portfolio hub showcasing my journey as a **Full Stack Engineer** and **AI Engineer Enthusiast**. This serves as the central landing page for my project showcase, where visitors can explore my work and navigate to individual project demonstrations.
+A modern, minimalist portfolio hub showcasing my journey as a **Full Stack Engineer** and **AI Engineer**. This serves as the central landing page for my project showcase, where visitors can explore my work and navigate to individual project demonstrations.
 
 ## ✨ Overview
 
